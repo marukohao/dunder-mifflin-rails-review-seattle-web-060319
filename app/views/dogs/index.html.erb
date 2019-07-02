@@ -1,0 +1,5 @@
+<%@dogs.each do |dog|%>
+<%= link_to dog.name, dog%>
+<%end%>
+
+<td><%= button_to '+', {:controller => "dogs", :action => "create", :dogs => Dog.sort_pop, :method=>:get}  %></td>
